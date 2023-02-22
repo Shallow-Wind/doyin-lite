@@ -1,12 +1,13 @@
 package repository
 
 import (
+	"errors"
+	"sync"
+
 	"github.com/ds_my/dal"
 	"github.com/ds_my/dal/model"
 	"github.com/ds_my/utils"
-	"errors"
 	"gorm.io/gorm"
-	"sync"
 )
 
 type Follow struct {

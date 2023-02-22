@@ -1,10 +1,11 @@
 package utils
 
 import (
+	"os"
+
 	"github.com/natefinch/lumberjack"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
-	"os"
 )
 
 var Log *zap.Logger
@@ -18,11 +19,11 @@ func LogConfig() {
 
 	//文件writeSyncer
 	fileWriteSyncer := zapcore.AddSync(&lumberjack.Logger{
-		Filename:   "./logs/ByteDance.log", //日志文件存放目录
-		MaxSize:    1,                      //文件大小限制,单位MB
-		MaxBackups: 5,                      //最大保留日志文件数量
-		MaxAge:     30,                     //日志文件保留天数
-		Compress:   false,                  //是否压缩处理
+		Filename:   "./logs/ds_log.log", //日志文件存放目录
+		MaxSize:    1,                   //文件大小限制,单位MB
+		MaxBackups: 5,                   //最大保留日志文件数量
+		MaxAge:     30,                  //日志文件保留天数
+		Compress:   false,               //是否压缩处理
 	})
 	fileCore := zapcore.NewCore(encoder, zapcore.NewMultiWriteSyncer(fileWriteSyncer, zapcore.AddSync(os.Stdout)), zapcore.InfoLevel) //第三个及之后的参数为写入文件的日志级别,ErrorLevel模式只记录error级别的日志
 

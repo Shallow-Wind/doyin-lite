@@ -1,4 +1,0 @@
-2023-02-22T09:51:02.192+0800	INFO	utils/upload_file.go:27	OSS初始化完成
-2023-02-22T09:51:02.233+0800	INFO	dal/dal.go:29	MySQL连接成功
-2023-02-22T09:56:39.946+0800	INFO	utils/upload_file.go:27	OSS初始化完成
-2023-02-22T09:56:39.974+0800	INFO	dal/dal.go:29	MySQL连接成功
