@@ -2,7 +2,7 @@ package common
 
 import "time"
 
-const MySqlDSN = "root:cxc666@tcp(127.0.0.1:3306)/byte_dance?charset=utf8mb4"
+const MySqlDSN = "root:cxc666@tcp(127.0.0.1:3306)/byte_dance?charset=utf8mb4&parseTime=true"
 
 // MD5Salt MD5加密时的盐
 const MD5Salt = "UII34HJ6OIO"
